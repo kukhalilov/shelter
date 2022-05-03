@@ -512,12 +512,12 @@ h3 {
 
 .contact {
     width: 280px;
-    gap: 40px;
+    gap: 38px;
 }
 
 .location {
     width: 302px;
-    gap: 34px;
+    gap:30.5px;
 }
 
 .contact h3,
@@ -531,7 +531,7 @@ h3 {
     align-items: center;
 }
 
-.location-info a, .contact-info a {
+.location-info a, .location-info p, .contact-info a {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
