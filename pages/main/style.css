@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Georgia';
     src: url('../../assets/fonts/georgia.ttf');
@@ -80,8 +84,7 @@ section {
     color: #cdcdcd;
 }
 
-button {
-    all: unset;
+.btn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,14 +92,7 @@ button {
     background: #f1cdb3;
     border-radius: 100px;
     padding: 15px 45px;
-}
-
-.hero-left button {
-    width: 118px;
     height: 52px;
-}
-
-button span {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -104,6 +100,15 @@ button span {
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
+    text-decoration: none;
+}
+
+.hero-left .btn {
+    width: 208px;
+}
+
+.hero-left .btn:hover {
+    background: #f4b98f;
 }
 
 header {
@@ -132,6 +137,10 @@ header {
     align-items: center;
     letter-spacing: 0.06em;
     color: #f1cdb3;
+}
+
+.logo {
+    text-decoration: none;
 }
 
 .logo p {
@@ -167,15 +176,6 @@ header {
     background: #f1cdb3;
 }
 
-.nav-links li:first-child a {
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 160%;
-    color: #fafafa;
-}
-
 .nav-link a {
     text-decoration: none;
     font-family: 'Arial';
@@ -184,6 +184,19 @@ header {
     font-size: 15px;
     line-height: 160%;
     color: #cdcdcd;
+}
+
+.nav-links a:hover {
+    color: #f1cdb3;
+}
+
+.nav-links li:first-child a {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #fafafa;
 }
 
 #about {
@@ -253,6 +266,10 @@ h3 {
     gap: 60px;
 }
 
+#pets .wrapper a:hover {
+    background-color: #f4b98f;
+}
+
 #pets h3 {
     width: 400px;
     height: 90px;
@@ -282,6 +299,10 @@ h3 {
     gap: 30px;
 }
 
+.card:hover {
+    background-color: #fff;
+}
+
 .card img {
     border-radius: 9px 9px 0px 0px;
 }
@@ -303,6 +324,11 @@ h3 {
     border: 2px solid #f1cdb3;
     border-radius: 100px;
     background-color: #fafafa;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #f1cdb3;
 }
 
 .arrow button {
@@ -313,6 +339,11 @@ h3 {
     border: 2px solid #f1cdb3;
     box-sizing: border-box;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.arrow button:hover {
+    background: #f1cdb3;
 }
 
 #help {
@@ -346,7 +377,8 @@ h3 {
     align-items: baseline;
 }
 
-.list h4, .credit-card h4 {
+.list h4,
+.credit-card h4 {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -433,23 +465,79 @@ h3 {
     gap: 15px;
 }
 
+.credit-card h4 a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #545454;
+}
+
 #footer {
     width: 1280px;
     height: 350px;
     background: url('../../assets/images/footer-gradient-background.png'),
         radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
         #211f20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
 #footer .wrapper {
     height: 100%;
     padding-top: 40px;
     display: flex;
+    gap: 160px;
 }
 
-.contact, .location {
+#footer a {
+    text-decoration: none;
+}
+
+.contact,
+.location {
     height: 234px;
     display: flex;
     flex-direction: column;
+}
+
+.contact {
+    width: 280px;
     gap: 40px;
+}
+
+.location {
+    width: 302px;
+    gap: 34px;
+}
+
+.contact h3,
+.location h3 {
+    color: #fff;
+}
+
+.location-info, .contact-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.location-info p, .contact-info a {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #f1cdb3;
+}
+
+.location-info svg {
+    width: 22px;
+    height: 32px;
+}
+
+.footer-img img {
+    width: 300px;
+    height: 310px;
 }
