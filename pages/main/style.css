@@ -522,7 +522,7 @@ h3 {
     align-items: center;
 }
 
-.location-info p, .contact-info a {
+.location-info a, .contact-info a {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -530,6 +530,10 @@ h3 {
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #f1cdb3;
+}
+
+.location-info a:hover, .contact-info a:hover {
+    color: #fff;
 }
 
 .location-info svg {
