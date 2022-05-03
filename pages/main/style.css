@@ -303,6 +303,10 @@ h3 {
     background-color: #fff;
 }
 
+.card:hover button {
+    background-color: #f7e8dd;
+}
+
 .card img {
     border-radius: 9px 9px 0px 0px;
 }
@@ -469,6 +473,10 @@ h3 {
     cursor: pointer;
     text-decoration: none;
     color: #545454;
+}
+
+.credit-card h4 a:hover {
+    color: #232323;
 }
 
 #footer {
