@@ -249,6 +249,10 @@ h3 {
     cursor: pointer;
 }
 
+.pagination:nth-child(3) button {
+    cursor: unset;
+}
+
 .pagination button:disabled {
     font-family: 'Georgia';
     font-style: normal;
