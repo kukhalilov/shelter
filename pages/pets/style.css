@@ -1,370 +1,683 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 @font-face {
-    font-family: 'Georgia';
-    src: url('../../assets/fonts/georgia.ttf');
+  font-family: 'Georgia';
+  src: url('../../assets/fonts/georgia.ttf');
 }
 
 @font-face {
-    font-family: 'Arial';
-    src: url('../../assets/fonts/arial.ttf');
+  font-family: 'Arial';
+  src: url('../../assets/fonts/arial.ttf');
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container,
 section {
-    width: 1280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wrapper {
-    width: 1200px;
+  width: 1200px;
 }
 
 header {
-    height: 60px;
-    margin: 30px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  height: 60px;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    width: 186px;
-    height: 60px;
+  width: 186px;
+  height: 60px;
 }
 
 .logo h1 {
-    width: 186px;
-    height: 35px;
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 110%;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.06em;
-    color: #545454;
+  width: 186px;
+  height: 35px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 .logo {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .logo p {
-    width: 180px;
-    margin-top: 10px;
-    margin-left: 4px;
-    height: 15px;
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.1em;
-    color: #292929;
+  width: 180px;
+  margin-top: 10px;
+  margin-left: 4px;
+  height: 15px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: #292929;
 }
 
 .navbar {
-    width: 443px;
-    height: 27px;
+  width: 443px;
+  height: 27px;
 }
 
 .nav-links {
-    display: flex;
-    gap: 35px;
-    list-style: none;
+  display: flex;
+  gap: 35px;
+  list-style: none;
 }
 
 .nav-links hr {
-    height: 3px;
-    width: 58px;
-    border: none;
-    background: #f1cdb3;
+  height: 3px;
+  width: 58px;
+  border: none;
+  background: #f1cdb3;
 }
 
 .nav-link a {
-    text-decoration: none;
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 160%;
-    color: #545454;
+  text-decoration: none;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #545454;
 }
 
 .nav-links a:hover {
-    color: #f1cdb3;
+  color: #f1cdb3;
 }
 
 .nav-links li:nth-child(2) a {
-    color: #292929;
+  color: #292929;
 }
 
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 52px;
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-    color: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
 h3 {
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 130%;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.06em;
-    color: #545454;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 #pets {
-    background: #f6f6f6;
+  background: #f6f6f6;
 }
 
 #pets .wrapper {
-    padding-top: 80px;
-    padding-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 45px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
 }
 
 #pets .wrapper a:hover {
-    background-color: #f4b98f;
+  background-color: #f4b98f;
 }
 
 #pets h3 {
-    width: 400px;
-    height: 90px;
-    text-align: center;
+  width: 400px;
+  height: 90px;
+  text-align: center;
 }
 
 .pets-slider {
-    padding: 15px 0;
-    display: flex;
-    align-items: center;
-    gap: 53px;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 53px;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 30px 40px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px 40px;
 }
 
 .card {
-    background: #fafafa;
-    border-radius: 9px;
-    width: 270px;
-    height: 435px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+  background: #fafafa;
+  border-radius: 9px;
+  width: 270px;
+  height: 435px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 
 .card:hover {
-    cursor: pointer;
-    background-color: #fff;
+  cursor: pointer;
+  background-color: #fff;
 }
 
 .card:hover button {
-    background-color: #f1cdb3;
+  background-color: #f1cdb3;
 }
 
 .card img {
-    object-fit: cover;
-    width: 270px;
-    height: 270px;
-    border-radius: 9px 9px 0px 0px;
+  object-fit: cover;
+  width: 270px;
+  height: 270px;
+  border-radius: 9px 9px 0px 0px;
 }
 
 .card h4 {
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: #545454;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 .card button {
-    width: 187px;
-    padding: 15px 42px;
-    border: 2px solid #f1cdb3;
-    border-radius: 100px;
-    background-color: #fafafa;
-    cursor: pointer;
+  width: 187px;
+  padding: 15px 42px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  background-color: #fafafa;
+  cursor: pointer;
 }
 
 .navigation {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .pagination button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fafafa;
-    width: 52px;
-    height: 52px;
-    padding: 0;
-    border: 2px solid #f1cdb3;
-    box-sizing: border-box;
-    border-radius: 50%;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 2px solid #f1cdb3;
+  box-sizing: border-box;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .pagination:nth-child(3) button {
-    cursor: unset;
+  cursor: unset;
 }
 
 .pagination button:disabled {
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 115%;
-    letter-spacing: 0.06em;
-    color: #cdcdcd;
-    border: 2px solid #cdcdcd;
-    cursor: not-allowed;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #cdcdcd;
+  border: 2px solid #cdcdcd;
+  cursor: not-allowed;
 }
 
 .pagination button:disabled:hover {
-    background: #fafafa;
+  background: #fafafa;
 }
 
 .pagination button:hover {
-    background: #f1cdb3;
+  background: #f1cdb3;
 }
 
 .pagination:nth-child(3) button {
-    background: #f1cdb3;
+  background: #f1cdb3;
 }
 
 .pagination:nth-child(3) button,
 .pagination:nth-child(4) button,
 .pagination:nth-child(5) button {
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 115%;
-    letter-spacing: 0.06em;
-    color: #292929;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
 #footer {
-    width: 1280px;
-    height: 350px;
-    background: url('../../assets/images/footer-gradient-background.png'),
-        radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
-        #211f20;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
+  width: 1280px;
+  height: 350px;
+  background: url('../../assets/images/footer-gradient-background.png'),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
 
 #footer .wrapper {
-    height: 100%;
-    padding-top: 40px;
-    display: flex;
-    gap: 160px;
+  height: 100%;
+  padding-top: 40px;
+  display: flex;
+  gap: 160px;
 }
 
 #footer a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .contact,
 .location {
-    margin-top: 19px;
-    height: 234px;
-    display: flex;
-    flex-direction: column;
+  margin-top: 19px;
+  height: 234px;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact {
-    width: 280px;
-    gap: 38px;
+  width: 280px;
+  gap: 38px;
 }
 
 .location {
-    width: 302px;
-    gap: 30px;
+  width: 302px;
+  gap: 30px;
 }
 
 .contact h3,
 .location h3 {
-    color: #fff;
+  color: #fff;
 }
 
 .location-info,
 .contact-info {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .location-info a,
 .location-info p,
 .contact-info a {
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 115%;
-    letter-spacing: 0.06em;
-    color: #f1cdb3;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
 }
 
 .location-info a:hover,
 .contact-info a:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .location-info svg {
-    width: 22px;
-    height: 32px;
+  width: 22px;
+  height: 32px;
 }
 
 .footer-img img {
-    width: 300px;
+  width: 300px;
+  height: 310px;
+}
+
+.hamburger-menu {
+  display: none;
+  width: 32px;
+  height: 22px;
+}
+
+.hamburger-menu ul {
+  width: 32px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.hamburger-menu ul li {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu hr {
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  border: none;
+}
+
+@media (min-width: 768px) and (max-width: 1279.7px) {
+  .container,
+  section,
+  #footer {
+    min-width: 768px;
+    max-width: 100vw;
+  }
+
+  .wrapper {
+    width: 708px;
+  }
+
+  header {
+    margin: 30px 0;
+  }
+
+  #pets {
+      padding: 80px 0 0 0;
+      height: 1733px;
+  }
+
+  #pets .wrapper {
+      padding: 0;
+      height: 1733px;
+      gap: 30px;
+  }
+
+  .pets-slider {
+      padding: 0;
+    gap: 12px;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 708px;
+    gap: 30px;
+  }
+
+  .cards .card:nth-child(odd) {
+      margin-right: 10px;
+  }
+
+  .cards .card:nth-child(7) {
+    display: none;
+  }
+
+  .cards .card:last-child {
+    display: none;
+  }
+
+  .navigation {
+      margin-top: 10px;
+  }
+
+  #footer {
+    height: 639px;
+  }
+
+  #footer .wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding-top: 30px;
+  }
+
+  .contact,
+  .location {
+    margin: 0;
+  }
+
+  .footer-img {
     height: 310px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 767.7px) {
+  .container,
+  section,
+  .wrapper,
+  #footer {
+    min-width: 320px;
+    max-width: 100vw;
+  }
+
+  .container .wrapper {
+      height: 120px;
+      display: flex;
+      justify-content: center;
+  }
+
+  header {
+      width: 320px;
+      flex-wrap: wrap;
+      justify-content: center;
+    margin: 30px 0 60px 0;
+  }
+
+  .logo {
+      color: #545454;
+  }
+
+  #header .logo {
+    margin-left: -40px;
+  }
+
+  .hamburger-menu {
+    margin-left: 42px;
+    display: block;
+  }
+
+  .navbar {
+      width: 0;
+      height: 0;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  #pets {
+    height: 1649px;
+  }
+
+  #pets .wrapper {
+    width: 300px;
+    padding: 0;
+    height: 1649px;
+    gap: 42px;
+  }
+
+  #pets .wrapper h3 {
+      width: 300px;
+      height: 64px;
+    justify-content: center;
+    padding: 0;
+    font-size: 25px;
+  }
+
+  .pets-slider {
+    width: 270px;
+    height: 1365px;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .pets-slider div.arrow:first-child {
+    order: 1;
+    padding-left: 43px;
+  }
+
+  .pets-slider div.arrow:last-child {
+    order: 2;
+    padding-left: 80px;
+  }
+
+  .cards {
+      display: flex;
+      flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .cards .card:nth-child(4), .cards .card:nth-child(5), .cards .card:nth-child(6), .cards .card:nth-child(7), .cards .card:nth-child(8) {
+    display: none;
+  }
+
+  .navigation {
+      gap: 10px;
+  }
+
+  #footer {
+    height: 809px;
+  }
+
+  #footer .wrapper {
+    width: 300px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 30px;
+  }
+
+  .location {
+    gap: 38px;
+    margin: 0;
+  }
+
+  .contact {
+    gap: 40px;
+    margin: 0;
+    width: 278px;
+    height: 208px;
+    align-items: center;
+  }
+
+  .location {
+    width: 300px;
+    height: 222px;
+  }
+
+  .contact h3, .location h3 {
+      font-size: 25px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .location h3 {
+      padding: 0 20px;
+  }
+
+  .contact h3 br {
+    display: none;
+  }
+
+  .footer-img {
+    width: 260px;
+    height: 269px;
+  }
+
+  .footer-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #header.mobile {
+    height: 823px;
+    width: 320px;
+    margin: 0;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  #header.mobile .logo {
+    margin-top: -190px;
+  }
+
+  #header.mobile .navbar {
+    margin-top: -256px;
+  }
+
+  #header.mobile .navbar {
+    width: 320px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 80px;
+  }
+
+  #header.mobile .hamburger-menu {
+    margin-top: -217px;
+    transform: rotate(-90deg) translateY(-53px);
+  }
+
+  #header.mobile .navbar .nav-links {
+    width: 320px;
+    gap: 40px;
+  }
+
+  #header.mobile .navbar .nav-link {
+    display: flex;
+    justify-content: center;
+  }
+
+  #header.mobile .navbar .nav-link hr {
+    width: 241.94px;
+  }
+
+  #header.mobile .navbar .nav-link:first-child {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header.mobile .navbar .nav-link a {
+    font-size: 32px;
+  }
+
+  #header.mobile .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
 }
