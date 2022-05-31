@@ -632,25 +632,23 @@ h3 {
   }
 
   #header.mobile .logo {
-    margin-top: -190px;
-  }
-
-  #header.mobile .navbar {
-    margin-top: -256px;
+      margin-top: 30px;
   }
 
   #header.mobile .navbar {
     width: 320px;
-    height: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 80px;
+    height: 703px;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    margin-top: 30px;
+    padding-top: 130px;
   }
 
   #header.mobile .hamburger-menu {
-    margin-top: -217px;
-    transform: rotate(-90deg) translateY(-53px);
+    transform: rotate(-90deg) translateX(-13px) translateY(-3px);
   }
 
   #header.mobile .navbar .nav-links {
@@ -667,7 +665,7 @@ h3 {
     width: 241.94px;
   }
 
-  #header.mobile .navbar .nav-link:first-child {
+  #header.mobile .navbar .nav-link:nth-child(2) {
     flex-direction: column;
     align-items: center;
   }
