@@ -1337,7 +1337,7 @@ h3 {
 
   #modal-content {
     width: 260px;
-    height: 375px;
+    height: 385px;
   }
 
   #modal-content img {
@@ -1345,12 +1345,13 @@ h3 {
   }
 
   .modal-text {
-    width: 240px;
+    width: 260px;
     padding: 5px;
     align-items: center;
   }
 
   .modal-text h3 {
+    font-size: 35px;
     padding: 0;
     text-align: center;
     width: unset;
@@ -1371,6 +1372,7 @@ h3 {
   .modal-text ul {
     align-self: flex-start;
     gap: 3px;
+    margin-left: 10px;
   }
 
   .modal-close {
