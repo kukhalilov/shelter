@@ -92,8 +92,34 @@ fetch('../../pets.json')
             fragment.appendChild(child);
           }
         }
-        cardsBlock.innerHTML = '';
-        cardsBlock.appendChild(fragment);
+        if (btn.children[0].classList.contains('arrow-right')) {
+          cardsBlock.classList.add('slide-left');
+          setTimeout(() => {
+            cardsBlock.innerHTML = '';
+            cardsBlock.classList.remove('slide-left');
+            cardsBlock.style.transition = 'none';
+            cardsBlock.classList.add('slide-left-from-right');
+            setTimeout(() => {
+              cardsBlock.style.transition = 'all 0.5s ease';
+              cardsBlock.classList.remove('slide-left-from-right');
+            }, 100);
+            cardsBlock.appendChild(fragment);
+          }, 100);
+        }
+        if (btn.children[0].classList.contains('arrow-left')) {
+          cardsBlock.classList.add('slide-right');
+          setTimeout(() => {
+            cardsBlock.innerHTML = '';
+            cardsBlock.classList.remove('slide-right');
+            cardsBlock.style.transition = 'none';
+            cardsBlock.classList.add('slide-right-from-left');
+            setTimeout(() => {
+              cardsBlock.style.transition = 'all 0.5s ease';
+              cardsBlock.classList.remove('slide-right-from-left');
+            }, 100);
+            cardsBlock.appendChild(fragment);
+          }, 100);
+        }
         createModal(cardsBlock, data);
       });
     });
@@ -130,13 +156,17 @@ function createModal(block, arr) {
       document.getElementById('modal-window')?.remove();
       document.body.appendChild(modal);
       document.documentElement.classList.add('has-modal');
-      let modalContent = document.getElementById('modal-content')
-      modalContent.addEventListener('mouseover', ()=> {
-        modalContent.parentElement.parentElement.classList.add('notHoveredOver')
-      })
-      modalContent.addEventListener('mouseleave', ()=> {
-        modalContent.parentElement.parentElement.classList.remove('notHoveredOver')
-      })
+      let modalContent = document.getElementById('modal-content');
+      modalContent.addEventListener('mouseover', () => {
+        modalContent.parentElement.parentElement.classList.add(
+          'notHoveredOver'
+        );
+      });
+      modalContent.addEventListener('mouseleave', () => {
+        modalContent.parentElement.parentElement.classList.remove(
+          'notHoveredOver'
+        );
+      });
       setTimeout(() => {
         window.addEventListener(
           'click',
