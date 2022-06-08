@@ -48,6 +48,7 @@ section {
 
 .wrapper {
   width: 1200px;
+  overflow: hidden;
 }
 
 #start {
@@ -302,6 +303,23 @@ h3 {
 .cards {
   display: flex;
   gap: 90px;
+  transition: all 0.5s ease;
+}
+
+.cards.slide-left {
+  transform: translate(-100vw);
+}
+
+.cards.slide-left-from-right {
+  transform: translate(100vw);
+}
+
+.cards.slide-right {
+  transform: translate(100vw);
+}
+
+.cards.slide-right-from-left {
+  transform: translate(-100vw);
 }
 
 .card {
@@ -349,6 +367,10 @@ h3 {
   border-radius: 100px;
   background-color: #fafafa;
   cursor: pointer;
+}
+
+.arrow {
+  z-index: 1111;
 }
 
 .arrow button {
@@ -633,6 +655,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 11111;
 }
 
 #modal-window:hover .modal-close {
