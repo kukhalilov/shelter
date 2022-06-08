@@ -201,10 +201,20 @@ fetch('../../pets.json')
         firstBtn.removeAttribute('disabled');
         prevBtn.removeAttribute('disabled');
         pageBtn.textContent = Number(pageBtn.textContent) + 1;
-        cardsBlock.innerHTML = '';
-        pages[Number(pageBtn.textContent) - 1].forEach((card) => {
-          cardsBlock.appendChild(card);
-        });
+        cardsBlock.classList.add('slide-left');
+        setTimeout(() => {
+          cardsBlock.classList.remove('slide-left');
+          cardsBlock.innerHTML = '';
+          cardsBlock.style.transition = 'none';
+          cardsBlock.classList.add('slide-left-from-right');
+          setTimeout(() => {
+            cardsBlock.style.transition = 'all 0.5s ease';
+            cardsBlock.classList.remove('slide-left-from-right');
+          }, 100);
+          pages[Number(pageBtn.textContent) - 1].forEach((card) => {
+            cardsBlock.appendChild(card);
+          });
+        }, 100);
         createModal(cardsBlock, data);
       }
       if (Number(pageBtn.textContent) === pages.length) {
@@ -218,10 +228,20 @@ fetch('../../pets.json')
         nextBtn.removeAttribute('disabled');
         lastBtn.removeAttribute('disabled');
         pageBtn.textContent = Number(pageBtn.textContent) - 1;
-        cardsBlock.innerHTML = '';
-        pages[Number(pageBtn.textContent) - 1].forEach((card) => {
-          cardsBlock.appendChild(card);
-        });
+        cardsBlock.classList.add('slide-right');
+        setTimeout(() => {
+          cardsBlock.classList.remove('slide-right');
+          cardsBlock.innerHTML = '';
+          cardsBlock.style.transition = 'none';
+          cardsBlock.classList.add('slide-right-from-left');
+          setTimeout(() => {
+            cardsBlock.style.transition = 'all 0.5s ease';
+            cardsBlock.classList.remove('slide-right-from-left');
+          }, 100);
+          pages[Number(pageBtn.textContent) - 1].forEach((card) => {
+            cardsBlock.appendChild(card);
+          });
+        }, 100);
         createModal(cardsBlock, data);
       }
       if (Number(pageBtn.textContent) === 1) {
@@ -232,10 +252,21 @@ fetch('../../pets.json')
 
     lastBtn.addEventListener('click', () => {
       pageBtn.textContent = pages.length;
-      cardsBlock.innerHTML = '';
-      pages[Number(pageBtn.textContent) - 1].forEach((card) => {
-        cardsBlock.appendChild(card);
-      });
+      cardsBlock.style.transition = 'all 0.3s ease';
+      cardsBlock.classList.add('slide-left');
+      setTimeout(() => {
+        cardsBlock.classList.remove('slide-left');
+        cardsBlock.innerHTML = '';
+        cardsBlock.style.transition = 'none';
+        cardsBlock.classList.add('slide-left-from-right');
+        setTimeout(() => {
+          cardsBlock.style.transition = 'all 0.3s ease';
+          cardsBlock.classList.remove('slide-left-from-right');
+        }, 200);
+        pages[Number(pageBtn.textContent) - 1].forEach((card) => {
+          cardsBlock.appendChild(card);
+        });
+      }, 200);
       createModal(cardsBlock, data);
       nextBtn.setAttribute('disabled', 'true');
       lastBtn.setAttribute('disabled', 'true');
@@ -245,10 +276,21 @@ fetch('../../pets.json')
 
     firstBtn.addEventListener('click', () => {
       pageBtn.textContent = 1;
-      cardsBlock.innerHTML = '';
-      pages[Number(pageBtn.textContent) - 1].forEach((card) => {
-        cardsBlock.appendChild(card);
-      });
+      cardsBlock.style.transition = 'all 0.3s ease';
+      cardsBlock.classList.add('slide-right');
+      setTimeout(() => {
+        cardsBlock.classList.remove('slide-right');
+        cardsBlock.innerHTML = '';
+        cardsBlock.style.transition = 'none';
+        cardsBlock.classList.add('slide-right-from-left');
+        setTimeout(() => {
+          cardsBlock.style.transition = 'all 0.3s ease';
+          cardsBlock.classList.remove('slide-right-from-left');
+        }, 200);
+        pages[Number(pageBtn.textContent) - 1].forEach((card) => {
+          cardsBlock.appendChild(card);
+        });
+      }, 200);
       createModal(cardsBlock, data);
       prevBtn.setAttribute('disabled', 'true');
       firstBtn.setAttribute('disabled', 'true');
