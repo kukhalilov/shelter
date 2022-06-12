@@ -104,6 +104,7 @@ fetch('../../pets.json')
               cardsBlock.classList.remove('slide-left-from-right');
             }, 100);
             cardsBlock.appendChild(fragment);
+            createModal(cardsBlock, data);
           }, 100);
         }
         if (btn.children[0].classList.contains('arrow-left')) {
@@ -118,9 +119,9 @@ fetch('../../pets.json')
               cardsBlock.classList.remove('slide-right-from-left');
             }, 100);
             cardsBlock.appendChild(fragment);
+            createModal(cardsBlock, data);
           }, 100);
         }
-        createModal(cardsBlock, data);
       });
     });
     createModal(cardsBlock, data);
