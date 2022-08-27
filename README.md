@@ -1,1 +1,1 @@
-https://kukhalilov.github.io/shelter/
+https://kukhalilov.github.io/shelter/pages/main/index.html

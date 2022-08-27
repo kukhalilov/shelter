@@ -39,7 +39,7 @@ body.only-nav {
 
 .container,
 section {
-  width: 1280px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -336,7 +336,7 @@ h3 {
 }
 
 #footer {
-  width: 1280px;
+  width: 100vw;
   height: 350px;
   background: url('../../assets/images/footer-gradient-background.png'),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
